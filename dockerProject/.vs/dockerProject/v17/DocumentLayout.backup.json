@@ -1,17 +1,40 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\ATEC - SSD\\Programa\u00E7\u00E3o\\C#\\ASP.NET DOCKER\\dockerProject\\",
+  "WorkspaceRootPath": "E:\\ATEC - SSD\\Programa\u00E7\u00E3o\\C#\\ASP.NET DOCKER\\ASP.NET-Docker-Webapp\\dockerProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9360DF6A-C0B0-45C2-A721-4F26223FC05E}|dockerProject\\dockerProject.csproj|e:\\atec - ssd\\programa\u00E7\u00E3o\\c#\\asp.net docker\\dockerproject\\dockerproject\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{9360DF6A-C0B0-45C2-A721-4F26223FC05E}|dockerProject\\dockerProject.csproj|e:\\atec - ssd\\programa\u00E7\u00E3o\\c#\\asp.net docker\\asp.net-docker-webapp\\dockerproject\\dockerproject\\views\\home\\studentlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9360DF6A-C0B0-45C2-A721-4F26223FC05E}|dockerProject\\dockerProject.csproj|solutionrelative:dockerproject\\views\\home\\studentlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9360DF6A-C0B0-45C2-A721-4F26223FC05E}|dockerProject\\dockerProject.csproj|e:\\atec - ssd\\programa\u00E7\u00E3o\\c#\\asp.net docker\\asp.net-docker-webapp\\dockerproject\\dockerproject\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9360DF6A-C0B0-45C2-A721-4F26223FC05E}|dockerProject\\dockerProject.csproj|solutionrelative:dockerproject\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9360DF6A-C0B0-45C2-A721-4F26223FC05E}|dockerProject\\dockerProject.csproj|e:\\atec - ssd\\programa\u00E7\u00E3o\\c#\\asp.net docker\\asp.net-docker-webapp\\dockerproject\\dockerproject\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9360DF6A-C0B0-45C2-A721-4F26223FC05E}|dockerProject\\dockerProject.csproj|solutionrelative:dockerproject\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9360DF6A-C0B0-45C2-A721-4F26223FC05E}|dockerProject\\dockerProject.csproj|e:\\atec - ssd\\programa\u00E7\u00E3o\\c#\\asp.net docker\\asp.net-docker-webapp\\dockerproject\\dockerproject\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9360DF6A-C0B0-45C2-A721-4F26223FC05E}|dockerProject\\dockerProject.csproj|solutionrelative:dockerproject\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9360DF6A-C0B0-45C2-A721-4F26223FC05E}|dockerProject\\dockerProject.csproj|e:\\atec - ssd\\programa\u00E7\u00E3o\\c#\\asp.net docker\\asp.net-docker-webapp\\dockerproject\\dockerproject\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{9360DF6A-C0B0-45C2-A721-4F26223FC05E}|dockerProject\\dockerProject.csproj|solutionrelative:dockerproject\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9360DF6A-C0B0-45C2-A721-4F26223FC05E}|dockerProject\\dockerProject.csproj|e:\\atec - ssd\\programa\u00E7\u00E3o\\c#\\asp.net docker\\dockerproject\\dockerproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9360DF6A-C0B0-45C2-A721-4F26223FC05E}|dockerProject\\dockerProject.csproj|e:\\atec - ssd\\programa\u00E7\u00E3o\\c#\\asp.net docker\\asp.net-docker-webapp\\dockerproject\\dockerproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9360DF6A-C0B0-45C2-A721-4F26223FC05E}|dockerProject\\dockerProject.csproj|solutionrelative:dockerproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9360DF6A-C0B0-45C2-A721-4F26223FC05E}|dockerProject\\dockerProject.csproj|e:\\atec - ssd\\programa\u00E7\u00E3o\\c#\\asp.net docker\\dockerproject\\dockerproject\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\dotnet\\sdk\\9.0.300\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9360DF6A-C0B0-45C2-A721-4F26223FC05E}|dockerProject\\dockerProject.csproj|e:\\atec - ssd\\programa\u00E7\u00E3o\\c#\\asp.net docker\\asp.net-docker-webapp\\dockerproject\\dockerproject\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9360DF6A-C0B0-45C2-A721-4F26223FC05E}|dockerProject\\dockerProject.csproj|solutionrelative:dockerproject\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9360DF6A-C0B0-45C2-A721-4F26223FC05E}|dockerProject\\dockerProject.csproj|e:\\atec - ssd\\programa\u00E7\u00E3o\\c#\\asp.net docker\\asp.net-docker-webapp\\dockerproject\\dockerproject\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{9360DF6A-C0B0-45C2-A721-4F26223FC05E}|dockerProject\\dockerProject.csproj|solutionrelative:dockerproject\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
@@ -22,7 +45,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,38 +53,114 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "E:\\ATEC - SSD\\Programa\u00E7\u00E3o\\C#\\ASP.NET DOCKER\\ASP.NET-Docker-Webapp\\dockerProject\\dockerProject\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "dockerProject\\Controllers\\HomeController.cs",
+              "ToolTip": "E:\\ATEC - SSD\\Programa\u00E7\u00E3o\\C#\\ASP.NET DOCKER\\ASP.NET-Docker-Webapp\\dockerProject\\dockerProject\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "dockerProject\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA5wCAAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-29T18:07:47.064Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Student.cs",
+              "DocumentMoniker": "E:\\ATEC - SSD\\Programa\u00E7\u00E3o\\C#\\ASP.NET DOCKER\\ASP.NET-Docker-Webapp\\dockerProject\\dockerProject\\Models\\Student.cs",
+              "RelativeDocumentMoniker": "dockerProject\\Models\\Student.cs",
+              "ToolTip": "E:\\ATEC - SSD\\Programa\u00E7\u00E3o\\C#\\ASP.NET DOCKER\\ASP.NET-Docker-Webapp\\dockerProject\\dockerProject\\Models\\Student.cs",
+              "RelativeToolTip": "dockerProject\\Models\\Student.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAmwA8AAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-29T17:36:52.432Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "StudentList.cshtml",
+              "DocumentMoniker": "E:\\ATEC - SSD\\Programa\u00E7\u00E3o\\C#\\ASP.NET DOCKER\\ASP.NET-Docker-Webapp\\dockerProject\\dockerProject\\Views\\Home\\StudentList.cshtml",
+              "RelativeDocumentMoniker": "dockerProject\\Views\\Home\\StudentList.cshtml",
+              "ToolTip": "E:\\ATEC - SSD\\Programa\u00E7\u00E3o\\C#\\ASP.NET DOCKER\\ASP.NET-Docker-Webapp\\dockerProject\\dockerProject\\Views\\Home\\StudentList.cshtml",
+              "RelativeToolTip": "dockerProject\\Views\\Home\\StudentList.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-29T18:02:19.098Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Microsoft.NET.Sdk.StaticWebAssets.targets",
+              "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\9.0.300\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
+              "ToolTip": "C:\\Program Files\\dotnet\\sdk\\9.0.300\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
+              "ViewState": "AgIAAF8CAAAAAAAAAADwv2YCAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2025-10-29T17:42:21.044Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "E:\\ATEC - SSD\\Programa\u00E7\u00E3o\\C#\\ASP.NET DOCKER\\ASP.NET-Docker-Webapp\\dockerProject\\dockerProject\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "dockerProject\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "E:\\ATEC - SSD\\Programa\u00E7\u00E3o\\C#\\ASP.NET DOCKER\\ASP.NET-Docker-Webapp\\dockerProject\\dockerProject\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "dockerProject\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAcwBsAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-29T11:54:01.493Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "E:\\ATEC - SSD\\Programa\u00E7\u00E3o\\C#\\ASP.NET DOCKER\\ASP.NET-Docker-Webapp\\dockerProject\\dockerProject\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "dockerProject\\Properties\\launchSettings.json",
+              "ToolTip": "E:\\ATEC - SSD\\Programa\u00E7\u00E3o\\C#\\ASP.NET DOCKER\\ASP.NET-Docker-Webapp\\dockerProject\\dockerProject\\Properties\\launchSettings.json",
+              "RelativeToolTip": "dockerProject\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-28T22:46:25.133Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "E:\\ATEC - SSD\\Programa\u00E7\u00E3o\\C#\\ASP.NET DOCKER\\dockerProject\\dockerProject\\Views\\Home\\Index.cshtml",
+              "DocumentMoniker": "E:\\ATEC - SSD\\Programa\u00E7\u00E3o\\C#\\ASP.NET DOCKER\\ASP.NET-Docker-Webapp\\dockerProject\\dockerProject\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "dockerProject\\Views\\Home\\Index.cshtml",
-              "ToolTip": "E:\\ATEC - SSD\\Programa\u00E7\u00E3o\\C#\\ASP.NET DOCKER\\dockerProject\\dockerProject\\Views\\Home\\Index.cshtml*",
-              "RelativeToolTip": "dockerProject\\Views\\Home\\Index.cshtml*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAsAAAAAAAAAA==",
+              "ToolTip": "E:\\ATEC - SSD\\Programa\u00E7\u00E3o\\C#\\ASP.NET DOCKER\\ASP.NET-Docker-Webapp\\dockerProject\\dockerProject\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "dockerProject\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-10-28T21:22:09.831Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
-              "DocumentMoniker": "E:\\ATEC - SSD\\Programa\u00E7\u00E3o\\C#\\ASP.NET DOCKER\\dockerProject\\dockerProject\\Program.cs",
+              "DocumentMoniker": "E:\\ATEC - SSD\\Programa\u00E7\u00E3o\\C#\\ASP.NET DOCKER\\ASP.NET-Docker-Webapp\\dockerProject\\dockerProject\\Program.cs",
               "RelativeDocumentMoniker": "dockerProject\\Program.cs",
-              "ToolTip": "E:\\ATEC - SSD\\Programa\u00E7\u00E3o\\C#\\ASP.NET DOCKER\\dockerProject\\dockerProject\\Program.cs",
+              "ToolTip": "E:\\ATEC - SSD\\Programa\u00E7\u00E3o\\C#\\ASP.NET DOCKER\\ASP.NET-Docker-Webapp\\dockerProject\\dockerProject\\Program.cs",
               "RelativeToolTip": "dockerProject\\Program.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T21:20:45.469Z"
+              "WhenOpened": "2025-10-28T21:20:45.469Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "Dockerfile",
-              "DocumentMoniker": "E:\\ATEC - SSD\\Programa\u00E7\u00E3o\\C#\\ASP.NET DOCKER\\dockerProject\\dockerProject\\Dockerfile",
+              "DocumentMoniker": "E:\\ATEC - SSD\\Programa\u00E7\u00E3o\\C#\\ASP.NET DOCKER\\ASP.NET-Docker-Webapp\\dockerProject\\dockerProject\\Dockerfile",
               "RelativeDocumentMoniker": "dockerProject\\Dockerfile",
-              "ToolTip": "E:\\ATEC - SSD\\Programa\u00E7\u00E3o\\C#\\ASP.NET DOCKER\\dockerProject\\dockerProject\\Dockerfile",
+              "ToolTip": "E:\\ATEC - SSD\\Programa\u00E7\u00E3o\\C#\\ASP.NET DOCKER\\ASP.NET-Docker-Webapp\\dockerProject\\dockerProject\\Dockerfile",
               "RelativeToolTip": "dockerProject\\Dockerfile",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-10-28T20:58:56.498Z"
             }
