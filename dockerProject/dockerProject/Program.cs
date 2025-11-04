@@ -1,9 +1,11 @@
+using dockerProject.Models;
+
 namespace dockerProject
 {
     public class Program
     {
         public static void Main(string[] args)
-        {
+        {         
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
@@ -19,7 +21,6 @@ namespace dockerProject
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();
@@ -31,6 +32,6 @@ namespace dockerProject
                 pattern: "{controller=Home}/{action=Index}/{id?}");
 
             app.Run();
-        }
+        }            
     }
 }

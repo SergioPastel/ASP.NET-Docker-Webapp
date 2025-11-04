@@ -5,7 +5,7 @@ FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 USER $APP_UID
 WORKDIR /app
 EXPOSE 80
-EXPOSE 21
+# EXPOSE 21 # Exponha a porta FTP padrão se necessário
 
 
 # Esta fase é usada para compilar o projeto de serviço
@@ -27,4 +27,5 @@ RUN dotnet publish "./dockerProject.csproj" -c $BUILD_CONFIGURATION -o /app/publ
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
+ENV ASPNETCORE_URLS=http://+:80
 ENTRYPOINT ["dotnet", "dockerProject.dll"]
