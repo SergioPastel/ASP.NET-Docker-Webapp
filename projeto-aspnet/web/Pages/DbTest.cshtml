@@ -1,0 +1,15 @@
+
+@page
+@model DbTestModel
+@{
+    ViewData["Title"] = "Teste à Base de Dados";
+}
+
+<h1>Teste à Base de Dados (MariaDB)</h1>
+
+<p>Status da ligação: <strong>@Model.Status</strong></p>
+
+@if (!string.IsNullOrEmpty(Model.ServerTime))
+{
+    <p>Hora atual no servidor MariaDB: <strong>@Model.ServerTime</strong></p>
+}

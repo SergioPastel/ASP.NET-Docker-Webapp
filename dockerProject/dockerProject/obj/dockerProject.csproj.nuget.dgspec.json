@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\ATEC - SSD\\Programação\\C#\\ASP.NET DOCKER\\ASP.NET-Docker-Webapp\\dockerProject\\dockerProject\\dockerProject.csproj": {}
+    "D:\\Aulas ATEC\\GIT Hub\\ASP.NET-Docker-Webapp\\dockerProject\\dockerProject\\dockerProject.csproj": {}
   },
   "projects": {
-    "E:\\ATEC - SSD\\Programação\\C#\\ASP.NET DOCKER\\ASP.NET-Docker-Webapp\\dockerProject\\dockerProject\\dockerProject.csproj": {
+    "D:\\Aulas ATEC\\GIT Hub\\ASP.NET-Docker-Webapp\\dockerProject\\dockerProject\\dockerProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\ATEC - SSD\\Programação\\C#\\ASP.NET DOCKER\\ASP.NET-Docker-Webapp\\dockerProject\\dockerProject\\dockerProject.csproj",
+        "projectUniqueName": "D:\\Aulas ATEC\\GIT Hub\\ASP.NET-Docker-Webapp\\dockerProject\\dockerProject\\dockerProject.csproj",
         "projectName": "dockerProject",
-        "projectPath": "E:\\ATEC - SSD\\Programação\\C#\\ASP.NET DOCKER\\ASP.NET-Docker-Webapp\\dockerProject\\dockerProject\\dockerProject.csproj",
-        "packagesPath": "C:\\Users\\sergi\\.nuget\\packages\\",
-        "outputPath": "E:\\ATEC - SSD\\Programação\\C#\\ASP.NET DOCKER\\ASP.NET-Docker-Webapp\\dockerProject\\dockerProject\\obj\\",
+        "projectPath": "D:\\Aulas ATEC\\GIT Hub\\ASP.NET-Docker-Webapp\\dockerProject\\dockerProject\\dockerProject.csproj",
+        "packagesPath": "C:\\Users\\zeped\\.nuget\\packages\\",
+        "outputPath": "D:\\Aulas ATEC\\GIT Hub\\ASP.NET-Docker-Webapp\\dockerProject\\dockerProject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\sergi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\zeped\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -79,7 +78,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

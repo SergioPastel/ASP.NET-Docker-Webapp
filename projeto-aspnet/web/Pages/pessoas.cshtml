@@ -1,0 +1,36 @@
+@page
+@model PessoasModel
+@{
+    ViewData["Title"] = "Lista de Pessoas";
+}
+
+<h1>Lista de Pessoas (MariaDB)</h1>
+
+<p>Status da ligação: <strong>@Model.Status</strong></p>
+
+@if (Model.Pessoas.Count == 0)
+{
+    <p>Não há registos na tabela <code>pessoas</code>.</p>
+}
+else
+{
+    <table border="1" cellpadding="5" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var p in Model.Pessoas)
+        {
+            <tr>
+                <td>@p.Id</td>
+                <td>@p.Nome</td>
+                <td>@p.Email</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
