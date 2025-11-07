@@ -23,7 +23,7 @@ namespace dockerProject.Controllers
         [HttpPost]
         public IActionResult studentDetails(int id)
         {
-            Student? student = students.Find(s => s.Id == id);
+            Student student = students.Find(s => s.Id == id);
             return View(student);
         }
 
