@@ -50,9 +50,16 @@
                 @Html.DisplayFor(modelItem => item.DateOfBirth)
             </td>
             <td>
-                @Html.ActionLink("Details", "Details", new { id = item.Id }) | 
-                <!-- Completar essa bomba. Não funciona grrrrr-->
-                @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @onclick = "return confirm('Are you sure you want to delete {item.Name}(ID: {item.Id}) ');" })
+                <form asp-action="studentDetails" asp-controller="Student" asp-route-id="@item.Id" method="post" class="d-inline">
+                    <button type="submit" style="">Details</button>
+                </form>|
+                <!-- Replaces actionlink, passes the student's id as part of the URL for the post request-->                
+                <form asp-action="Delete" asp-controller="Student" asp-route-id="@item.Id" method="post"
+                    onsubmit="return confirm('Are you sure you want to delete @item.Name (ID: @item.Id)?');"
+                    class="d-inline">
+                    <button type="submit" style="">Delete</button>
+                </form>
+                  
             </td>
         </tr>        
     }

@@ -36,20 +36,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/ATEC - SSD/Programação/C\#/ASP.NET DOCKER/ASP.NET-Docker-Webapp/dockerProject/dockerProject/Views/Home/studentDetails.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxzdHVkZW50RGV0YWlscy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[E:/ATEC - SSD/Programação/C\#/ASP.NET DOCKER/ASP.NET-Docker-Webapp/dockerProject/dockerProject/Views/Home/StudentList.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTdHVkZW50TGlzdC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [E:/ATEC - SSD/Programação/C\#/ASP.NET DOCKER/ASP.NET-Docker-Webapp/dockerProject/dockerProject/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/ATEC - SSD/Programação/C\#/ASP.NET DOCKER/ASP.NET-Docker-Webapp/dockerProject/dockerProject/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ATEC - SSD/Programação/C\#/ASP.NET DOCKER/ASP.NET-Docker-Webapp/dockerProject/dockerProject/Views/Student/studentDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxzdHVkZW50RGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/ATEC - SSD/Programação/C\#/ASP.NET DOCKER/ASP.NET-Docker-Webapp/dockerProject/dockerProject/Views/Student/StudentList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxTdHVkZW50TGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/ATEC - SSD/Programação/C\#/ASP.NET DOCKER/ASP.NET-Docker-Webapp/dockerProject/dockerProject/Views/_ViewImports.cshtml]
