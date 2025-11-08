@@ -1,6 +1,121 @@
 ﻿@{
-    ViewData["Title"] = "Privacy Policy";
+    ViewData["Title"] = "Privacy";
 }
-<h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<h1 class="text-center mb-4">@ViewData["Title"]</h1>
+
+<div class="container">
+    <p><strong>Política de Privacidade (versão humana)</strong></p>
+
+    <p>Sabemos que ninguém lê políticas de privacidade. Mas já que estás aqui, vamos ser honestos.</p>
+
+    <h3>1. Quem somos</h3>
+    <p>
+        Somos um humilde site de gestão de estudantes, ainda a aprender a não rebentar com a base de dados.
+        Se viste esta página, parabéns: já sabes mais que 90% dos utilizadores.
+    </p>
+
+    <h3>2. Que dados guardamos</h3>
+    <ul>
+        <li>Nome</li>
+        <li>Email</li>
+        <li>NIF</li>
+        <li>Data de nascimento</li>
+    </ul>
+    <p>
+        P.S :  Não guardamos a tua password, opiniões sobre professores, nem o número de cafés que bebes enquanto debugas.
+    </p>
+
+    <h3>3. Para que usamos os dados</h3>
+    <p>Usamos os dados apenas para:</p>
+    <ul>
+        <li>Mostrar listas de estudantes bonitinhas</li>
+        <li>Editar e apagar registos sem partir tudo</li>
+        <li>Fazer o developer sentir que o CRUD está completo</li>
+    </ul>
+
+    <h3>4. Quem vê os dados</h3>
+    <p>
+        Tu, através da interface, e o developer, quando está a tentar perceber porque é que o SELECT não funciona.
+    </p>
+
+    <h3>5. Cookies</h3>
+    <p>
+        Podemos usar cookies técnicos para o site funcionar direitinho.
+        Não usamos cookies para te perseguir pela internet nem para mostrar anúncios duvidosos.
+    </p>
+
+    <h3>6. Segurança</h3>
+    <p>
+        Tentamos manter a base de dados mais segura do que o Wi-Fi do café.
+        Há passwords, credenciais e um ou outro pedido de ajuda ao Stack Overflow.
+    </p>
+
+    <h3>7. Os teus direitos</h3>
+    <ul>
+        <li>Podes pedir para apagar dados (aka o developer correr um DELETE).</li>
+        <li>Podes corrigir dados com o botão <strong>Edit</strong>.</li>
+        <li>Podes criar estudantes de teste à vontade – a BD aguenta (esperemos).</li>
+    </ul>
+
+    <h3>8. Versão séria (um dia)</h3>
+    <p>
+        Se este projeto alguma vez for para produção “a sério”, esta página vai ficar mais séria e chata.
+        Até lá, considera isto uma política de privacidade em modo sandbox.
+    </p>
+
+    <p class="text-center mt-5">
+        <em class="neon-text">
+            ⚡ Se leste até aqui, ganhas automaticamente +1 respeito dos Devs deste projeto ⚡
+        </em>
+    </p>
+</div>
+
+<style>
+    h1, h3 {
+        color: #222;
+        font-weight: 700;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        line-height: 1.6;
+        font-size: 1.1rem;
+    }
+
+    .neon-text {
+        display: inline-block;
+        font-size: 2rem;
+        font-weight: 800;
+        background: linear-gradient(90deg, #ff6ec4, #7873f5, #1fd1f9, #ff6ec4);
+        background-size: 400% 100%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: gradientMove 5s ease infinite, glowPulse 2s ease-in-out infinite;
+    }
+
+    @@keyframes gradientMove {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    @@keyframes glowPulse {
+        0%, 100% {
+            text-shadow: 0 0 10px #ff6ec4, 0 0 20px #7873f5, 0 0 30px #1fd1f9;
+        }
+
+        50% {
+            text-shadow: 0 0 25px #ff6ec4, 0 0 35px #7873f5, 0 0 45px #1fd1f9;
+        }
+    }
+</style>

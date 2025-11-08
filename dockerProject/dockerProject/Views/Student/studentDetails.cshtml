@@ -41,8 +41,7 @@
             @Html.DisplayFor(model => model.DateOfBirth)
         </dd>
     </dl>
-</div>
-<div>
-    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a>
+    <a asp-action="StudentList" class="btn btn-secondary">Voltar a lista</a>
+
 </div>
