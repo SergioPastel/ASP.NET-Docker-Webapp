@@ -24,11 +24,11 @@ Para configurar uma pasta partilhada entre o Windows host e a máquina virtual L
 
 1. Crie uma pasta no ambiente de trabalho do Windows host.
 
-![[Captura de ecrã 2025-11-07 175821.png]]
+![Imagem 1](Docs/Imagens/1.png)
 
 2. Abra o VirtualBox, selecione a máquina virtual Debian, e aceda às Definições e Pastas Partilhadas.
 
-![[Captura de ecrã 2025-11-07 180006.png]]
+![Imagem 2](Docs/Imagens/2.png)
 
 3. Dentro do menu Pastas Partilhadas, clique em Pasta da Máquina e no ícone da pasta com o símbolo "+" verde:
 	1. No menu Editar Partilha, escolha a pasta a partilhar.
@@ -36,16 +36,16 @@ Para configurar uma pasta partilhada entre o Windows host e a máquina virtual L
 	3. Em Ponto de Montagem (Mount Point), indique o caminho onde será montada a pasta no Linux.
 	4. Ative a opção Montar Automaticamente para que a partilha seja montada em cada arranque.
 
-![[Captura de ecrã 2025-11-07 180139.png]]
+![Imagem 3](Docs/Imagens/3.png)
 
 4. Inicie a máquina Debian e entre como utilizador "root".
 5. No menu Dispositivos, selecione Inserir imagem de CD dos Guest Additions.
 
-![[Captura de ecrã 2025-11-07 180304.png]]
+![Imagem 4](Docs/Imagens/4.png)
 
 6. Crie as pastas necessárias para a montagem.
 
-![[Captura de ecrã 2025-11-07 180942.png]]
+![Imagem 5](Docs/Imagens/5.png)
 
 7. Monte o CD das Guest Additions com o comando:
 
@@ -53,7 +53,7 @@ Para configurar uma pasta partilhada entre o Windows host e a máquina virtual L
 mount /dev/cdrom /mnt/cdrom
 ```
 
-![[Captura de ecrã 2025-11-07 181039.png]]
+![Imagem 6](Docs/Imagens/6.png)
 
 8. Verifique o conteúdo da pasta montada:
 
@@ -61,7 +61,7 @@ mount /dev/cdrom /mnt/cdrom
 ls -la /mnt/cdrom
 ```
 
-![[Captura de ecrã 2025-11-07 181053.png]]
+![Imagem 7](Docs/Imagens/7.png)
 
 9. Atualize os repositórios e o sistemas:
 
@@ -69,7 +69,7 @@ ls -la /mnt/cdrom
 apt update && apt upgrade -y
 ```
 
-![[Captura de ecrã 2025-11-07 181624.png]]
+![Imagem 8](Docs/Imagens/8.png)
 
 10. Instale os pacotes necessários:
 
@@ -82,9 +82,9 @@ apt install build-essential dkms linux-headers-$(uname -r) -y
 - linux-headers: Ficheiros de cabeçalho necessários para automaticamente módulos compatíveis com o kernel.
 - $(uname -r): Retorna a versão exata do kernel em execução.
 
-![[Captura de ecrã 2025-11-07 181955.png]]
+![Imagem 9](Docs/Imagens/9.png)
 
-![[Captura de ecrã 2025-11-07 182028.png]]
+![Imagem 10](Docs/Imagens/10.png)
 
 11. Reinicie a máquina para aplicar todas as alterações:
 
@@ -92,11 +92,11 @@ apt install build-essential dkms linux-headers-$(uname -r) -y
 reboot
 ```
 
-![[Captura de ecrã 2025-11-08 143452.png]]
+![Imagem 11](Docs/Imagens/11.png)
 
 12. Após o arranque, confirme o conteúdo da pasta partilhada:
 
-![[Captura de ecrã 2025-11-08 143511.png]]
+![Imagem 12](Docs/Imagens/12.png)
 
 ### VVWARE
 
@@ -104,23 +104,23 @@ Para configurar uma pasta partilhada no VMware entre o Windows host e a máquina
 
 1. Crie uma pasta no ambiente de trabalho do Windows host.
 
-![[Captura de ecrã 2025-11-07 175821.png]]
+![Imagem 1](Docs/Imagens/1.png)
 
 2. Com a máquina virtual desligada, selecione Edit Virtual Machine Settings.
 
-![[Pasted image 20251107174312.png]]
+![Imagem 13](Docs/Imagens/13.png)
 
 3. Aceda a Options e Shared Folders, e selecione Always Settings.
 
-![[Pasted image 20251107174538.png]]
+![Imagem 14](Docs/Imagens/14.png)
 
 4. Clique em Add para escolher a pasta a partilhar.
 
-![[Pasted image 20251107174723.png]]
+![Imagem 15](Docs/Imagens/15.png)
 
 5. Confirme que a pasta aparece listada com a caixa de seleção ativa.
 
-![[Pasted image 20251107174932.png]]
+![Imagem 16](Docs/Imagens/16.png)
 
 6. Verifique se pacote "open-vm-tools" está instalado (por defeito, costuma vir pré-instalado):
 
