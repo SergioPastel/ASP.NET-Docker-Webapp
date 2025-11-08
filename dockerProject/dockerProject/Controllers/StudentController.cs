@@ -1,89 +1,107 @@
-﻿using dockerProject.Models;
-using Microsoft.AspNetCore.Http;
+﻿using dockerProject.Data;
+using dockerProject.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace dockerProject.Controllers
 {
     public class StudentController : Controller
     {
-        // STatic list to simulate a database
-        private static List<Student> students = new List<Student>
-        {
-            new Student { Id = 1, Name = "Alice", Email = "alice@example.com", Password = "password123", DateOfBirth = new DateTime(2000, 1, 1) },
-            new Student { Id = 2, Name = "Bob", Email = "bob@example.com", Password = "password456", DateOfBirth = new DateTime(1998, 5, 15) }
-        };
+        private readonly MariaDbService _db;
 
-        // GET: StudentController
-        public ActionResult StudentList()
+        public StudentController(MariaDbService db)
         {
-            return View(students);
+            _db = db;
         }
 
-        // POST: StudentController/Details/5
+        // GET: /Student/StudentList
+        public async Task<ActionResult> StudentList()
+        {
+            // Garante que a BD tem dados iniciais (só se estiver vazia)
+            await _db.EnsureSeedDataAsync();
+
+            // Vai buscar os estudantes à MariaDB
+            List<Student> students = await _db.GetStudentsAsync();
+
+            return View(students);   // usa Views/Student/StudentList.cshtml
+        }
+
+        // POST: /Student/StudentDetails/5
         [HttpPost]
-        public IActionResult studentDetails(int id)
+        public async Task<IActionResult> StudentDetails(int id)
         {
-            Student? student = students.Find(s => s.Id == id);
-            return View(student);
-        }
-
-        // GET: StudentController/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: StudentController/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: StudentController/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: StudentController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {              
-                return View();
-            }
-        }
-
-        // POST: StudentController/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id)
-        {
-            var student = students.Find(s => s.Id == id);
+            var student = await _db.GetStudentByIdAsync(id);
             if (student == null)
             {
                 return NotFound();
             }
 
-            // Performs the deletion
-            students.Remove(student);
+            return View(student);    // precisa de Views/Student/StudentDetails.cshtml (se quiseres detalhes)
+        }
 
-            // Redirect to the Student List after successful deletion, showing the updated list               
-            return RedirectToAction("StudentList");
+        // GET: /Student/Create
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        // POST: /Student/Create
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> Create(Student student)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(student);
+            }
+
+            await _db.AddStudentAsync(student);   // grava na MariaDB
+
+            return RedirectToAction(nameof(StudentList));
+        }
+
+        // GET: /Student/Edit/5
+        public async Task<ActionResult> Edit(int id)
+        {
+            var student = await _db.GetStudentByIdAsync(id);
+            if (student == null)
+            {
+                return NotFound();
+            }
+
+            return View(student);
+        }
+
+        // POST: /Student/Edit/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> Edit(Student student)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(student);
+            }
+
+            await _db.UpdateStudentAsync(student);
+
+            return RedirectToAction(nameof(StudentList));
+        }
+
+        // POST: /Student/Delete/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> Delete(int id)
+        {
+            await _db.DeleteStudentAsync(id);
+
+            return RedirectToAction(nameof(StudentList));
+        }
+
+        // /Student/Index → redireciona para a lista
+        public ActionResult Index()
+        {
+            return RedirectToAction(nameof(StudentList));
         }
     }
 }

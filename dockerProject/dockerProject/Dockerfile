@@ -1,29 +1,28 @@
-# Acesse https://aka.ms/customizecontainer para saber como personalizar seu contêiner de depuração e como o Visual Studio usa este Dockerfile para criar suas imagens para uma depuração mais rápida.
-
-# Esta fase é usada durante a execução no VS no modo rápido (Padrão para a configuração de Depuração)
+# Etapa base: runtime ASP.NET
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
-USER $APP_UID
 WORKDIR /app
 EXPOSE 80
 # EXPOSE 21 # Exponha a porta FTP padrão se necessário
 
-
-# Esta fase é usada para compilar o projeto de serviço
+# Etapa de build: compilar o projeto
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["dockerProject/dockerProject.csproj", "dockerProject/"]
-RUN dotnet restore "./dockerProject/dockerProject.csproj"
+
+# Copia o ficheiro de projeto (ajustado para tua estrutura)
+COPY ["dockerProject.csproj", "./"]
+RUN dotnet restore "./dockerProject.csproj"
+
+# Copia o resto do código
 COPY . .
-WORKDIR "/src/dockerProject"
 RUN dotnet build "./dockerProject.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
-# Esta fase é usada para publicar o projeto de serviço a ser copiado para a fase final
+# Etapa de publish: gerar build final
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
 RUN dotnet publish "./dockerProject.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
-# Esta fase é usada na produção ou quando executada no VS no modo normal (padrão quando não está usando a configuração de Depuração)
+# Etapa final: runtime para produção
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .

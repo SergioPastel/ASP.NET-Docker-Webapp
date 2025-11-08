@@ -1,0 +1,26 @@
+﻿@model dockerProject.Models.Account;
+
+@{
+    ViewData["Title"] = "Login";
+    Layout = null; 
+}
+
+<h1>Login</h1>
+
+<form class="login" asp-action="Login" asp-controller="Account" method="post">
+    <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" class="form-control" id="username" asp-for="Username" required />
+        <span asp-validation-for="Username" class="text-danger"></span> <!-- Validation error message for username -->
+    </div>
+
+    <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" class="form-control" id="password" asp-for="Password" title="" />
+        <span asp-validation-for="Password" class="text-danger"></span> <!-- Validation error message for password -->
+    </div>
+
+    @Html.ValidationSummary(true) <!-- Shows if you inserted wrong credentials -->
+
+    <button type="submit" class="btn btn-primary">Login</button>
+</form>

@@ -7,7 +7,7 @@
 <h1>StudentList</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-controller="Student" asp-action="Create" class="btn btn-primary">Create New</a>
 </p>
 <table class="table">
     <thead>
@@ -22,7 +22,7 @@
                 @Html.DisplayNameFor(model => model.Email)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Password)
+                @Html.DisplayNameFor(model => model.Nif)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.DateOfBirth)
@@ -44,13 +44,13 @@
                 @Html.DisplayFor(modelItem => item.Email)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Password)
+                @Html.DisplayFor(modelItem => item.Nif)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.DateOfBirth)
             </td>
             <td>
-                <form asp-action="studentDetails" asp-controller="Student" asp-route-id="@item.Id" method="post" class="d-inline">
+                    <form class="d-inline" asp-action="StudentDetails" asp-controller="Student" asp-route-id="@item.Id" method="post">
                     <button type="submit" style="">Details</button>
                 </form>|
                 <!-- Replaces actionlink, passes the student's id as part of the URL for the post request-->                

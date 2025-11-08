@@ -1,3 +1,4 @@
+using dockerProject.Data;
 using dockerProject.Models;
 
 namespace dockerProject
@@ -10,6 +11,7 @@ namespace dockerProject
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddScoped<MariaDbService>();
 
             var app = builder.Build();
 
@@ -29,7 +31,7 @@ namespace dockerProject
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=Account}/{action=Login}/{id?}");
 
             app.Run();
         }            
