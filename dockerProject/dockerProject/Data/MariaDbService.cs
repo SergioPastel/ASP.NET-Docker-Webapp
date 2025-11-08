@@ -162,7 +162,22 @@ namespace dockerProject.Data
             await using var conn = new MySqlConnection(_connectionString);
             await conn.OpenAsync();
 
-            // 1) Verifica se já existem dados
+            // 1) Garante que a tabela students existe
+            const string createTableSql = @"
+                CREATE TABLE IF NOT EXISTS students (
+                    Id INT AUTO_INCREMENT PRIMARY KEY,
+                    Name VARCHAR(100) NOT NULL,
+                    Email VARCHAR(100) NOT NULL,
+                    Nif INT NOT NULL,
+                    DateOfBirth DATE NOT NULL
+                );";
+
+            await using (var createCmd = new MySqlCommand(createTableSql, conn))
+            {
+                await createCmd.ExecuteNonQueryAsync();
+            }
+
+            // 2) Verifica se já existem dados
             const string countSql = "SELECT COUNT(*) FROM students;";
             await using (var countCmd = new MySqlCommand(countSql, conn))
             {
@@ -171,12 +186,12 @@ namespace dockerProject.Data
 
                 if (count > 0)
                 {
-                    // Já há dados → NÃO faz seed outra vez
+                    // Já há dados entao não faz seed outra vez
                     return;
                 }
             }
 
-            // 2) Se chegou aqui, a tabela está vazia → insere dados de exemplo
+            // 3) Se chegou aqui, a tabela está vazia → insere dados de exemplo
             const string insertSql = @"
                 INSERT INTO students (Name, Email, Nif, DateOfBirth)
                 VALUES (@Name, @Email, @Nif, @DateOfBirth);";
