@@ -9,8 +9,8 @@ namespace dockerProject.Controllers
         // STatic list to simulate a database
         private static List<Student> students = new List<Student>
         {
-            new Student { Id = 1, Name = "Alice", Email = "alice@example.com", Password = "password123", DateOfBirth = new DateTime(2000, 1, 1) },
-            new Student { Id = 2, Name = "Bob", Email = "bob@example.com", Password = "password456", DateOfBirth = new DateTime(1998, 5, 15) }
+            new Student { Id = 1, Name = "Alice", Email = "alice@example.com", Nif = 123456789, DateOfBirth = new DateOnly(2000, 1, 1) },
+            new Student { Id = 2, Name = "Bob", Email = "bob@example.com", Nif = 987654321, DateOfBirth = new DateOnly(1998, 5, 15) }
         };
 
         // GET: StudentController
