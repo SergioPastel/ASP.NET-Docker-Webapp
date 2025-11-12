@@ -1,8 +1,7 @@
-# Usar Virtual Machine
-
+# Pasta Partilhada
 Aqui encontram-se as configurações da VM destinadas ao desenvolvimento deste projeto.
 
-Recomenda-se a criação da VM de forma a melhor simular um ambiente de desenvolvimento real num servidor remoto Debian, assim como para encapsular o ambiente separadamente do sistema operativo hóspede. No entanto, se assim o desejar, pode correr este projeto normalmente no Windows, atravez do [Docker Desktop](../newREADME.md/#instalar).
+Recomenda-se a criação da VM de forma a melhor simular um ambiente de desenvolvimento real num servidor remoto Debian, assim como para encapsular o ambiente separadamente do sistema operativo hóspede. No entanto, se assim o desejar, pode correr este projeto normalmente no Windows, atravez do [Docker Desktop](../README.md/#Como-configurar-o-projeto).
 
 Para isto, é necessária a instalação do Debian num hypervisor da sua escolha.
 Os softwares de virtualização suportados de momentos são `VBox` e `VMWare`.
@@ -42,7 +41,10 @@ Para configurar uma pasta partilhada entre o Windows host e a máquina virtual L
 
 6. Crie as pastas necessárias para a montagem.
 
-![Imagem 5](Imagens/5.png)
+```Bash
+mkdir /mnt/shared
+mkdir /mnt/cdrom
+```
 
 7. Monte o CD das Guest Additions com o comando:
 
@@ -50,23 +52,17 @@ Para configurar uma pasta partilhada entre o Windows host e a máquina virtual L
 mount /dev/cdrom /mnt/cdrom
 ```
 
-![Imagem 6](Imagens/6.png)
-
 8. Verifique o conteúdo da pasta montada:
 
 ```Bash
 ls -la /mnt/cdrom
 ```
 
-![Imagem 7](Imagens/7.png)
-
 9. Atualize os repositórios e o sistemas:
 
 ```Bash
 apt update && apt upgrade -y
 ```
-
-![Imagem 8](Imagens/8.png)
 
 10. Instale os pacotes necessários:
 
@@ -79,21 +75,17 @@ apt install build-essential dkms linux-headers-$(uname -r) -y
 - linux-headers: Ficheiros de cabeçalho necessários para automaticamente módulos compatíveis com o kernel.
 - $(uname -r): Retorna a versão exata do kernel em execução.
 
-![Imagem 9](Imagens/9.png)
-
-![Imagem 10](Imagens/10.png)
-
 11. Reinicie a máquina para aplicar todas as alterações:
 
 ```Bash
 reboot
 ```
 
-![Imagem 11](Imagens/11.png)
-
 12. Após o arranque, confirme o conteúdo da pasta partilhada:
 
-![Imagem 12](Imagens/12.png)
+```Bash
+ls /mnt/shared/
+```
 
 ### VMWare
 Para configurar uma pasta partilhada no VMware entre o Windows host e a máquina virtual Linux:
