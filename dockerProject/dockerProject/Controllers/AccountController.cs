@@ -1,10 +1,18 @@
-﻿using dockerProject.Models;
+﻿using dockerProject.Data;
+using dockerProject.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace dockerProject.Controllers
 {
     public class AccountController : Controller
     {
+        private readonly MariaDbService _db;
+
+        public AccountController(MariaDbService db)
+        {
+            _db = db;
+        }
+
         // GET: Display the login form
         public IActionResult Login()
         {
@@ -15,20 +23,34 @@ namespace dockerProject.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]  // Ensure the anti-forgery token is validated
         public IActionResult Login(Account model)
-        {
+        {                  
             if (ModelState.IsValid)
             {
-                // Dummy authentication
-                if (model.Username == "admin" && model.Password == "password")
+                // Check for student credentials
+                var students = _db.GetStudentsAsync().Result;
+                // Find student by email and NIF
+                var student = students.Find(s => s.Email == model.Username && s.Nif.ToString() == model.Password);
+
+                // If the student is found
+                if (student != null)
                 {
-                    // Redirect to index
+                    // Log in as a student and redirect to index
+                    HttpContext.Session.SetString("UserRole", "Student");
+                    HttpContext.Session.SetString("UserName", student.Name);
                     return RedirectToAction("Index", "Home");
                 }
-                else
+
+                // If the user is not a student, check for admin credentials
+                if (model.Username == "admin" && model.Password == "password")
                 {
-                    // If login fails, add a model error and redisplay the login form
-                    ModelState.AddModelError("", "Invalid username or password.");
+                    // Log in as an admin and redirect to index
+                    HttpContext.Session.SetString("UserRole", "Admin");
+                    HttpContext.Session.SetString("UserName", "Administrator");
+                    return RedirectToAction("Index", "Home");
                 }
+
+                // If login fails, add a model error and redisplay the login form
+                ModelState.AddModelError("", "Invalid username or password.");
             }
 
             // If we get here, it means the login failed or the model was invalid, so return the view with errors

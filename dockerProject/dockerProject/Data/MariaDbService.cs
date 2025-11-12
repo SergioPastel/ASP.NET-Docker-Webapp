@@ -216,7 +216,5 @@ namespace dockerProject.Data
                 await cmd.ExecuteNonQueryAsync();
             }
         }
-    }
-    
-    
+    }        
 }
