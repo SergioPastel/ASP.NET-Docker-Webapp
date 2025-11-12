@@ -56,5 +56,15 @@ namespace dockerProject.Controllers
             // If we get here, it means the login failed or the model was invalid, so return the view with errors
             return View(model);
         }
+
+        // Log out action
+        [HttpPost]
+        public IActionResult Logout()
+        {
+            // Clear session so role/username/studentId are removed
+            HttpContext.Session.Clear();
+
+            return RedirectToAction("Login", "Account");
+        }
     }
 }

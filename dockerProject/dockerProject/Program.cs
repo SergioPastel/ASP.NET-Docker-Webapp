@@ -14,6 +14,7 @@ namespace dockerProject
             builder.Services.AddScoped<MariaDbService>();
 
             // For the session to work
+            builder.Services.AddHttpContextAccessor();
             builder.Services.AddDistributedMemoryCache();
             builder.Services.AddSession(options =>
             {

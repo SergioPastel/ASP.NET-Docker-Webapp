@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using dockerProject.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace dockerProject.Controllers
@@ -7,17 +8,13 @@ namespace dockerProject.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        /*List<Student> students = new List<Student>
-            {
-                new Student { Id = 1, Name = "Alice", Email = "alice@example.com", Password = "password123", DateOfBirth = new DateTime(2000, 1, 1) },
-                new Student { Id = 2, Name = "Bob", Email = "bob@example.com", Password = "password456", DateOfBirth = new DateTime(1998, 5, 15) }
-            };*/
 
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
         }
 
+        [RequireRole]
         public IActionResult Index()
         {
             return View();

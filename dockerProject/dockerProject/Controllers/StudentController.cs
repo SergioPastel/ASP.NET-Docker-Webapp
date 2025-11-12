@@ -1,5 +1,6 @@
 ﻿using dockerProject.Data;
 using dockerProject.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -16,6 +17,7 @@ namespace dockerProject.Controllers
         }
 
         // GET: /Student/StudentList
+        [RequireRole]
         public async Task<ActionResult> StudentList()
         {
             // Garante que a BD tem dados iniciais (só se estiver vazia)
@@ -23,12 +25,13 @@ namespace dockerProject.Controllers
 
             // Vai buscar os estudantes à MariaDB
             List<Student> students = await _db.GetStudentsAsync();
+            var sortedList = students.OrderBy(student => student.Id);
 
-            return View(students);   // usa Views/Student/StudentList.cshtml
+            return View(sortedList);   // usa Views/Student/StudentList.cshtml
         }
 
         // POST: /Student/StudentDetails/5
-        [HttpPost]
+        [HttpPost]       
         public async Task<IActionResult> StudentDetails(int id)
         {
             var student = await _db.GetStudentByIdAsync(id);
@@ -41,6 +44,7 @@ namespace dockerProject.Controllers
         }
 
         // GET: /Student/Create
+        [RequireRole("Admin")]
         public IActionResult Create()
         {
             return View();
@@ -62,6 +66,7 @@ namespace dockerProject.Controllers
         }
 
         // GET: /Student/Edit/5
+        [RequireRole("Admin")]
         public async Task<ActionResult> Edit(int id)
         {
             var student = await _db.GetStudentByIdAsync(id);

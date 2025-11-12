@@ -20,3 +20,75 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.navbar-brand-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 10px;
+}
+
+.navbar-subtitle {
+    margin-top: -6px;
+    font-size: 0.85rem;
+}
+
+/* For the image overlay */
+.team-member {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.team-member img {
+    transition: filter 0.3s ease, transform 0.3s ease;
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.team-member:hover img {
+    filter: brightness(60%); /* darken image */
+    transform: scale(1.05);  /* optional subtle zoom */
+}
+
+/* overlay text that appears on hover */
+.team-member .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0); /* invisible by default */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    border-radius: 10px;
+}
+
+.team-member:hover .overlay {
+    background-color: rgba(0, 0, 0, 0.4); /* faint dark overlay on hover */
+}
+
+.overlay-text {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.2rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.team-member:hover .overlay-text {
+    opacity: 1;
+}
+
+.name {
+    text-decoration: underline;
+}
+
+.team-member img {
+    height: 300px;
+    object-fit: cover; /* Keeps aspect ratio and crops overflow if necessary */
+    border-radius: inherit; /* Keeps Bootstrap’s rounded style */
+}

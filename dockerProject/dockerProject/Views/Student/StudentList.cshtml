@@ -2,13 +2,18 @@
 
 @{
     ViewData["Title"] = "StudentList";
+    var role = Context.Session.GetString("UserRole");
 }
 
-<h1>StudentList</h1>
+<h1>Student List</h1>
 
-<p>
-    <a asp-controller="Student" asp-action="Create" class="btn btn-primary">Create New</a>
-</p>
+@if (role == "Admin")
+{
+    <p>
+        <a asp-controller="Student" asp-action="Create" class="btn btn-primary">Create New</a>
+    </p>    
+}
+
 <table class="table">
     <thead>
         <tr>
@@ -27,7 +32,10 @@
             <th>
                 @Html.DisplayNameFor(model => model.DateOfBirth)
             </th>
-            <th></th>
+            @if (role == "Admin")
+            {
+                <th class="fw-bold">Options</th>
+            }            
         </tr>
     </thead>
     <tbody>
@@ -44,23 +52,31 @@
                 @Html.DisplayFor(modelItem => item.Email)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Nif)
+                @if (role == "Admin"){
+                        @Html.DisplayFor(modelItem => item.Nif)
+                    }
+                    else
+                    {
+                        <p>■■■■■■■■■</p>
+                    }                    
             </td>
-            <td>
+            <td>                
                 @Html.DisplayFor(modelItem => item.DateOfBirth)
             </td>
-            <td>
-                    <form class="d-inline" asp-action="StudentDetails" asp-controller="Student" asp-route-id="@item.Id" method="post">
-                    <button type="submit" style="">Details</button>
-                </form>|
-                <!-- Replaces actionlink, passes the student's id as part of the URL for the post request-->                
-                <form asp-action="Delete" asp-controller="Student" asp-route-id="@item.Id" method="post"
-                    onsubmit="return confirm('Are you sure you want to delete @item.Name (ID: @item.Id)?');"
-                    class="d-inline">
-                    <button type="submit" style="">Delete</button>
-                </form>
-                  
-            </td>
+                @if (role == "Admin")
+                {
+                    <td>
+                        <form class="d-inline" asp-action="StudentDetails" asp-controller="Student" asp-route-id="@item.Id" method="post">
+                            <button class="btn btn-light" type="submit">Details</button>
+                        </form>|
+                        <!-- Replaces actionlink, passes the student's id as part of the URL for the post request-->
+                        <form asp-action="Delete" asp-controller="Student" asp-route-id="@item.Id" method="post"
+                              onsubmit="return confirm('Are you sure you want to delete @item.Name (ID: @item.Id)?');"
+                              class="d-inline">
+                            <button class="btn btn-danger" type="submit">Delete</button>
+                        </form>
+                    </td>
+                }                              
         </tr>        
     }
     </tbody>
