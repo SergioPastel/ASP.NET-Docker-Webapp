@@ -43,7 +43,7 @@ Para correr o projeto abra um terminal no diretório `dockerProject\dockerProjec
     podman-compose up --build -d
     ```
 
-##  — Testar no Browser
+## - Testar no Browser
 
 Após o build:
 
@@ -53,7 +53,7 @@ Após o build:
 
 ---
 
-## — Comandos úteis
+## - Comandos úteis
 
 | Descrição | Comando |
 |------------|----------|
