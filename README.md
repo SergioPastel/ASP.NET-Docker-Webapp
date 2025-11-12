@@ -42,3 +42,37 @@ Para correr o projeto abra um terminal no diretório `dockerProject\dockerProjec
     ```bash
     podman-compose up --build -d
     ```
+
+##  — Testar no Browser
+
+Após o build:
+
+- A aplicação estará disponível em:  
+    
+ **http://IP_DO_DEBIAN:8080**
+
+---
+
+## — Comandos úteis
+
+| Descrição | Comando |
+|------------|----------|
+| Build e iniciar containers | `docker compose up --build -d` |
+| Parar containers | `docker compose down` |
+| Ver containers ativos | `docker ps` |
+| Ver logs da app | `docker logs aspnetapp --tail=50` |
+| Entrar no container da DB | `docker exec -it mariadb mariadb -u root -p` |
+| Ver dados | `USE meusite; SELECT * FROM students;` |
+
+---
+
+## - Resultado Final
+
+Após seguir estes passos, terás:
+- Um container **MariaDB** com dados persistentes.  
+- Um container **ASP.NET Core** totalmente funcional.  
+- Comunicação automática entre ambos através do Compose.  
+- Deploy simples com um único comando:  
+  ```bash
+  docker compose up --build -d
+  ```
