@@ -1,4 +1,4 @@
-# ASP.NET Docker Webapp
+# DockVerse
 
 Este projeto consiste numa aplicação web desenvolvida em ASP.NET MVC, com uma base de dados MariaDB, configurada para correr em ambiente Docker.<br>
 O objetivo é demonstrar uma estrutura completa e modular, onde cada componente é executado em contentores distintos, facilitando o desenvolvimento, a portabilidade e o controlo de versões.<br>
