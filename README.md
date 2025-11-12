@@ -9,7 +9,7 @@ Aplicação usa as seguintes ferramentas:
 - Debian - 13.1.0;
 - VirtualBox - 7.2.4;
 - VMware - 17.6.3;
-- Visual Studio 2022 - com .Net 8.0 e ASP.Net;
+- Visual Studio 2022 - com .Net 8.0, ASP.Net e Kestrel Web Server;
 - MobaXterm 25.3;
 - Docker ou Podman;
 - Docker Compose ou Podman-Compose;
@@ -47,9 +47,17 @@ Para correr o projeto abra um terminal no diretório `dockerProject\dockerProjec
 
 Após o build:
 
-- A aplicação estará disponível em:  
+A aplicação estará disponível em:  
     
  **http://IP_DO_DEBIAN:8080**
+
+### Credenciais de ADMIN: <br>
+- Username: admin <br>
+- Password: password
+
+### Credenciais de usuario(se registado na DB): <br>
+- Username: [email do estudante] <br>
+- Password: [nif do estudante] <br>
 
 ## Comandos úteis
 
