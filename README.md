@@ -27,7 +27,7 @@ Aplicação usa as seguintes ferramentas:
 
 Para fazer o setup do projeto, **recomenda-se** a configuração de uma máquina virtual Debian.
 
-Para fazer o setup da [pasta partilhada](pastaPartilhada.md).
+Para fazer o setup da [pasta partilhada](Docs/pastaPartilhada.md).
 
 No entanto, também é possível recrear o ambiente de desenvolvimento em Windows, através do Docker Desktop. Para tal, clone o repositório num diretório da sua escolha e siga os seguintes passos para correr o projeto.
 
