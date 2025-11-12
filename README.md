@@ -25,9 +25,7 @@ Aplicação usa as seguintes ferramentas:
 
 ## Como configurar o projeto
 
-Para fazer o setup do projeto, **recomenda-se** a configuração de uma máquina virtual Debian.
-
-Para fazer o setup da [pasta partilhada](Docs/pastaPartilhada.md).
+Para fazer o setup do projeto, **recomenda-se** a configuração de uma máquina virtual Debian com [pasta partilhada](Docs/pastaPartilhada.md).
 
 No entanto, também é possível recrear o ambiente de desenvolvimento em Windows, através do Docker Desktop. Para tal, clone o repositório num diretório da sua escolha e siga os seguintes passos para correr o projeto.
 
@@ -43,7 +41,7 @@ Para correr o projeto abra um terminal no diretório `dockerProject\dockerProjec
     podman-compose up --build -d
     ```
 
-## - Testar no Browser
+## Testar no Browser
 
 Após o build:
 
@@ -53,7 +51,7 @@ Após o build:
 
 ---
 
-## - Comandos úteis
+## Comandos úteis
 
 | Descrição | Comando |
 |------------|----------|
@@ -66,7 +64,7 @@ Após o build:
 
 ---
 
-## - Resultado Final
+## Resultado Final
 
 Após seguir estes passos, terás:
 - Um container **MariaDB** com dados persistentes.  
