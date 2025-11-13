@@ -42,7 +42,11 @@ Para correr o projeto abra um terminal no diretório `dockerProject\dockerProjec
     ```bash
     podman-compose up --build -d
     ```
-
+> Se por acaso obtiver um erro de permissões usando o docker, corra:<br>
+>```bash
+> sudo usermod -aG docker $USER
+>```
+> para adicionar o seu utilizador ao grupo `docker`
 ## Testar no Browser
 
 Após o build:
