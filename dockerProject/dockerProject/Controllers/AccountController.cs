@@ -22,10 +22,13 @@ namespace dockerProject.Controllers
         // POST: Handle login form submission
         [HttpPost]
         [ValidateAntiForgeryToken]  // Ensure the anti-forgery token is validated
-        public IActionResult Login(Account model)
+        public async Task<IActionResult> Login(Account model)
         {                  
             if (ModelState.IsValid)
             {
+                // Ensure
+                await _db.EnsureSeedDataAsync();                
+
                 // Check for student credentials
                 var students = _db.GetStudentsAsync().Result;
                 // Find student by email and NIF
